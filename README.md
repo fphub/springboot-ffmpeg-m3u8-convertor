@@ -1,23 +1,31 @@
 # springboot-ffmpeg-m3u8-convertor
 
 #### 介绍
-springboot+ffmpeg，将视频转换为 m3u8 格式。支持 .mp4 | .flv | .avi | .mov | .wmv | .wav 格式视频转换。指定文件路径 + 文件上传转换两种转换方式。
+springboot+ffmpeg，将视频转换为 m3u8 格式。支持 `.mp4` | `.flv` | `.avi` | `.mov` | `.wmv` | `.wav` 格式视频转换。指定文件路径 + 文件上传转换两种转换方式。
+
+已集成knife4j，可直接使用文档测试功能测试（一定要安装FFmpeg）。
 
 #### 软件架构
-软件架构说明
-
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+> SpringBoot + FFmpeg + hutool + knife4j
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1. git clone 代码
+
+2. 修改 ffmpeg-m3u8-client 模块配置文件 application.yml
+
+   ```yml
+   #文件上传方式转换配置
+   m3u8:
+     transfer:
+       base-path: D:/temp/video/base/  # 上传基础目录。（可以配合nginx，做视频服务器）
+       temp-path: D:/temp/video/tmp/   # 临时文件目录
+       delete-temp-file: true          #转换完成后，是否删除临时文件。默认false
+   ```
+
+3. **安装 FFmpeg**
+
+4. 启动、测试即可。
 
 #### 参与贡献
 

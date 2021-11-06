@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.lfp.config.m3u8.M3u8TransferAutoConfiguration
